@@ -11,8 +11,8 @@ plugins:
 # - Para GitHub Pages (Project Page), edita:
 #     url: "https://TU_USUARIO.github.io"
 #     baseurl: "/NOMBRE_DEL_REPO"
-url: "https://hubergiron.github.io/"
-baseurl: "/portafolio-just-the-docs"
+url: "https://Mausalas11.github.io/"
+baseurl: "/documentacion-Mau-salas"
 
 #Configuracion Formato, Header y Footer
 just_the_docs:
