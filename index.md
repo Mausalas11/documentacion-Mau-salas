@@ -18,8 +18,5 @@ Este portafolio tiene como objetivo documentar parte de mi desarrollo académico
 Además de mantener mis trabajos organizados, este espacio permitirá observar mi progreso y los conocimientos que vaya adquiriendo a lo largo del tiempo.
 
 Contenido:
-- [1. Publicar en GitHub Pages](01-publicar-en-github-pages.md)
-- [2. Estructura del repositorio](02-estructura-del-repo.md)
-- [3. Escribir en Markdown](03-markdown.md)
-- [4. Personalización visual](04-estilos.md)
-
+- [Semana 1:Portafolio web](01-portafolio-web.md)
+  - [Semana 1: Portafolio web]({{ '/01-portafolio-web.html' | relative_url }}
