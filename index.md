@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Inicio
+title: Autobiografía
 nav_order: 1
 ---
 
