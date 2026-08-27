@@ -11,6 +11,11 @@ Aparte de la pasion por la tecnologia soy alguien muy activo, ya que toda mi vid
 
 Otras de mis pasiones son los videojuegos que los eh amado desde muy pequeño y me han esyado presentes en toda mi niñez.
 
+## Sobre este portafolio
+
+Este portafolio tiene como objetivo documentar parte de mi desarrollo académico. Aquí organizaré las prácticas, proyectos, reportes, documentos y evidencias que realice durante mi formación.
+
+Además de mantener mis trabajos organizados, este espacio permitirá observar mi progreso y los conocimientos que vaya adquiriendo a lo largo del tiempo.
 
 Contenido:
 - [1. Publicar en GitHub Pages](01-publicar-en-github-pages.md)
