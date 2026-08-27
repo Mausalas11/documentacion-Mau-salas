@@ -4,16 +4,12 @@ title: Inicio
 nav_order: 1
 ---
 
-# Plantilla de documentación con Just the Docs
+# Autobiografía Mauricio Salas Espinosa
+Mi nombre es Mauricio Salas Espinosa, nacido en CDMX y actualmente me dedico a ser estudiante de tiempo completo en la Universidad Iberoamericana de la CDMX, cursando la carrera de ingenieria en mecatroncia y sistemas ciberfisicos.
 
-Este repositorio está diseñado para entender como utilizar la plantilla de repositorio que utiliza **"Just the docs"** de Jekyll y el lenguaje **"Markdown"**:
+Aparte de la pasion por la tecnologia soy alguien muy activo, ya que toda mi vide practique futbol americano y es el deporte que amo pero por el moemento no puedo continuar asi que decidi entrar al equipo representativo de flag football.
 
-1. **Crear y publicar** el sitio en GitHub Pages.
-2. Aprender la **estructura** típica de un repo de documentación.
-3. Dominar **Markdown** (texto, listas, tablas, código).
-4. Configurar la **navegación** (sidebar, secciones, orden).
-5. Agregar **imágenes, videos** y otros recursos.
-6. Ajustar **estilos** (logo, colores, footer).
+Otras de mis pasiones son los videojuegos que los e amado desde muy pequeño y me han esyado presentes en toda mi niñez.
 
 
 Contenido:
