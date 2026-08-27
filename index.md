@@ -9,7 +9,7 @@ Mi nombre es Mauricio Salas Espinosa, nacido en CDMX y actualmente me dedico a s
 
 Aparte de la pasion por la tecnologia soy alguien muy activo, ya que toda mi vide practique futbol americano y es el deporte que amo pero por el moemento no puedo continuar asi que decidi entrar al equipo representativo de flag football.
 
-Otras de mis pasiones son los videojuegos que los e amado desde muy pequeño y me han esyado presentes en toda mi niñez.
+Otras de mis pasiones son los videojuegos que los eh amado desde muy pequeño y me han esyado presentes en toda mi niñez.
 
 
 Contenido:
