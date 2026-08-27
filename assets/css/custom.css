@@ -1,73 +1,110 @@
 /* === HEADER (barra superior) === */
-.site-header { background-color: #E00034 !important; }
-.site-title, .site-nav a { color: #ffffff !important; }
+.site-header {
+  background-color: #D97706 !important;
+}
 
-/* === ENLACES EN CONTENIDO (sin morado/azul y con subrayado del color) === */
-:root { --link-color: #E00034; }
-a, a:visited { color: var(--link-color); }
-a { text-decoration-color: rgba(224, 0, 52, 0.4); }
-a:hover { color: #b00028; text-decoration-color: rgba(176, 0, 40, 0.6); }
-a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
+.site-title,
+.site-nav a {
+  color: #ffffff !important;
+}
 
-/* === SIDEBAR ROJO COMPLETO === */
+/* === ENLACES EN CONTENIDO === */
+:root {
+  --link-color: #D97706;
+}
+
+a,
+a:visited {
+  color: var(--link-color);
+}
+
+a {
+  text-decoration-color: rgba(217, 119, 6, 0.4);
+}
+
+a:hover {
+  color: #9A4D00;
+  text-decoration-color: rgba(154, 77, 0, 0.7);
+}
+
+a:focus {
+  outline: 2px solid #FCD34D;
+  outline-offset: 2px;
+}
+
+/* === SIDEBAR NARANJA === */
 .side-bar,
 .side-bar .site-nav,
-.side-bar .nav-list { background-color: #E00034 !important; }
+.side-bar .nav-list {
+  background-color: #D97706 !important;
+}
 
-/* Título del sitio en el sidebar */
+/* Título del sitio */
 .side-bar .site-title {
   color: #ffffff !important;
   font-weight: 500;
   font-size: 1.4rem;
 }
 
-/* Links del sidebar (texto blanco; sin degradados) */
+/* Links del sidebar */
 .nav-list .nav-list-link,
-.nav-list .nav-list-link:visited { color: #ffffff !important; }
+.nav-list .nav-list-link:visited {
+  color: #ffffff !important;
+}
+
 .nav-list .nav-list-link,
 .nav-list .nav-list-link.active,
 .nav-list .nav-list-link:hover {
-  background: none !important;            /* quita el gradiente lila */
+  background: none !important;
 }
+
 .nav-list .nav-list-link.active {
-  color: #FFD5DE !important;
+  color: #ffffff !important;
   font-weight: 500;
-  background-color: rgba(255,255,255,0.12) !important;
+  background-color: rgba(255, 255, 255, 0.20) !important;
 }
+
 .nav-list .nav-list-link:hover {
-  color: #FFD5DE !important;
-  background-color: rgba(255,255,255,0.08) !important;
+  color: #FFF3D6 !important;
+  background-color: rgba(255, 255, 255, 0.12) !important;
 }
 
-/* (antiguo) Jerarquía simple - será mejorado al final */
-.nav-list .nav-list-item .nav-list .nav-list-link { padding-left: 1.25rem; }
+/* Jerarquía */
+.nav-list .nav-list-item .nav-list .nav-list-link {
+  padding-left: 1.25rem;
+}
 
-/* Flechas (chevrons) del menú */
+/* Flechas del menú */
 .nav-list-expander,
 .nav-list-expander svg {
   color: #ffffff !important;
   stroke: #ffffff !important;
   fill: none !important;
 }
+
 .nav-list-expander:hover,
 .nav-list-expander:hover svg {
-  color: #FFD5DE !important;
-  stroke: #FFD5DE !important;
+  color: #FCD34D !important;
+  stroke: #FCD34D !important;
 }
 
-/* === FOOTER DEL SIDEBAR (texto y enlace legibles) === */
-.side-bar .site-footer { color: #ffffff !important; }
+/* === FOOTER DEL SIDEBAR === */
+.side-bar .site-footer {
+  color: #ffffff !important;
+}
+
 .side-bar .site-footer a,
 .side-bar .site-footer a:visited {
-  color: #FFD5DE !important;
-  text-decoration-color: rgba(255,213,222,0.6);
+  color: #FFF3D6 !important;
+  text-decoration-color: rgba(255, 243, 214, 0.6);
 }
+
 .side-bar .site-footer a:hover {
   color: #ffffff !important;
   text-decoration-color: #ffffff;
 }
 
-/* === MENÚ HAMBURGUESA (móvil) EN BLANCO === */
+/* === MENÚ HAMBURGUESA === */
 #menu-toggle + label,
 .menu-label,
 .menu-button,
@@ -76,98 +113,107 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
 .site-header .menu-icon,
 .site-header .menu-button {
   color: #ffffff !important;
-  fill:  #ffffff !important;
-  stroke:#ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
 }
-#menu-toggle:focus + label,
-.menu-button:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
 
-/* === MIGAS (breadcrumbs) a la paleta === */
-.breadcrumbs li a, .breadcrumbs li a:visited { color: #E00034; }
-.breadcrumbs li a:hover { color: #b00028; }
+#menu-toggle:focus + label,
+.menu-button:focus {
+  outline: 2px solid #FCD34D;
+  outline-offset: 2px;
+}
+
+/* === BREADCRUMBS === */
+.breadcrumbs li a,
+.breadcrumbs li a:visited {
+  color: #D97706;
+}
+
+.breadcrumbs li a:hover {
+  color: #9A4D00;
+}
 
 /* === CONTENIDO === */
-.page-content { background-color: #ffffff; color: #333333; }
+.page-content {
+  background-color: #FFFBF5;
+  color: #332A22;
+}
 
-/* ===== 1) Header: iconos/botón del menú en blanco (forzado) ===== */
+/* === HEADER: ICONOS === */
 .site-header svg,
 .site-header .menu-icon,
 .site-header .menu-button,
 .site-header .menu-icon svg {
   color: #ffffff !important;
-  fill:  #ffffff !important;
-  stroke:#ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
-/* Estado abierto del menú (checkbox marcado) */
 #menu-toggle:checked + label,
 #menu-toggle:checked + label .menu-icon,
 #menu-toggle:checked + label .menu-icon svg {
   color: #ffffff !important;
-  fill:  #ffffff !important;
-  stroke:#ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
-/* Fallback por si el tema usa otros selectores para el toggle */
 .site-header .nav-toggle,
 .site-header .nav-toggle .icon,
 .site-header .nav-trigger,
 .site-header .nav-trigger .icon {
   color: #ffffff !important;
-  fill:  #ffffff !important;
-  stroke:#ffffff !important;
+  fill: #ffffff !important;
+  stroke: #ffffff !important;
 }
 
-/* ===== FOOTER: estilos separados por breakpoint ===== */
-
-/* Desktop (sidebar visible, fondo rojo) */
+/* ===== FOOTER ===== */
 @media (min-width: 66rem) {
   .side-bar .site-footer {
     color: #ffffff !important;
     opacity: 1 !important;
   }
+
   .side-bar .site-footer a,
   .side-bar .site-footer a:visited {
-    color: #FFD5DE !important;
-    text-decoration-color: rgba(255, 213, 222, 0.6) !important;
+    color: #FFF3D6 !important;
+    text-decoration-color: rgba(255, 243, 214, 0.6) !important;
   }
+
   .side-bar .site-footer a:hover {
     color: #ffffff !important;
     text-decoration-color: #ffffff !important;
   }
 }
 
-/* Móvil / pantalla chica (footer global sobre fondo claro) */
 @media (max-width: 66rem) {
   footer.site-footer {
-    background: #ffffff !important;   /* fondo claro */
+    background: #FFFBF5 !important;
     opacity: 1 !important;
   }
 
-  /* Texto base del footer en gris legible */
   footer.site-footer,
   footer.site-footer p,
   footer.site-footer span,
   footer.site-footer *:not(a) {
-    color: #495057 !important;
+    color: #7C5A3C !important;
     text-shadow: none !important;
   }
 
-  /* Enlaces del footer en rojo Ibero */
   footer.site-footer a,
   footer.site-footer a:visited {
-    color: #E00034 !important;
-    text-decoration-color: rgba(224, 0, 52, 0.5) !important;
+    color: #D97706 !important;
+    text-decoration-color: rgba(217, 119, 6, 0.5) !important;
   }
+
   footer.site-footer a:hover {
-    color: #b00028 !important;
-    text-decoration-color: rgba(176, 0, 40, 0.7) !important;
+    color: #9A4D00 !important;
+    text-decoration-color: rgba(154, 77, 0, 0.7) !important;
   }
 }
 
-/* ====== Jerarquía del menú lateral (mejor diferenciación) ====== */
+/* ===== JERARQUÍA DEL MENÚ ===== */
 
-/* Nivel 1 (padres) */
+/* Nivel 1 */
 .side-bar .nav-list > .nav-list-item > .nav-list-link {
   font-weight: 400;
   letter-spacing: .2px;
@@ -176,103 +222,91 @@ a:focus { outline: 2px solid #FFD5DE; outline-offset: 2px; }
   background: none !important;
 }
 
-/* Nivel 2 (hijos) */
+/* Nivel 2 */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link {
   font-weight: 300;
   font-size: 0.95rem;
   padding-left: 1.75rem;
   position: relative;
-  background: rgba(255,255,255,0.05); /* leve contraste */
+  background: rgba(255, 255, 255, 0.06);
   border-left: 3px solid transparent;
 }
 
-/* Nivel 3 (nietos) */
+/* Nivel 3 */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-item .nav-list .nav-list-link {
   padding-left: 2.25rem;
   font-size: 0.9rem;
-  background: rgba(255,255,255,0.03);
+  background: rgba(255, 255, 255, 0.04);
 }
 
-/* Punto visual (bullet) para hijos */
-.side-bar .nav-list .nav-list-item .nav-list .nav-list-link::before {
-  content: "•";
-  position: absolute;
-  left: 1.3rem;
-  top: 50%;
-  transform: translateY(-50%);
-  opacity: .6;
-  font-size: .8rem;
-}
-
-/* Hover y Activo más notorios */
+/* Hover */
 .side-bar .nav-list .nav-list-link:hover {
-  color: #FFD5DE !important;
-  background: rgba(255,255,255,0.10) !important;
+  color: #FFF3D6 !important;
+  background: rgba(255, 255, 255, 0.12) !important;
 }
+
+/* Activo */
 .side-bar .nav-list .nav-list-link.active {
   color: #ffffff !important;
   font-weight: 500;
-  background: rgba(255,255,255,0.20) !important;
+  background: rgba(255, 255, 255, 0.22) !important;
 }
 
-/* Barra izquierda solo para hijos (nivel 2+) en hover/activo */
+/* Barra izquierda de submenús */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link:hover,
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link.active {
-  border-left-color: #FFD5DE;
+  border-left-color: #FCD34D;
 }
 
-/* Mejor foco accesible */
+/* Foco */
 .side-bar .nav-list .nav-list-link:focus {
-  outline: 2px solid #FFD5DE !important;
+  outline: 2px solid #FCD34D !important;
   outline-offset: 2px;
   border-radius: 4px;
 }
 
-/* Separación sutil entre secciones de nivel 1 */
+/* Separación entre secciones */
 .side-bar .nav-list > .nav-list-item + .nav-list-item {
   margin-top: .15rem;
 }
 
-/* Oculta el footer del tema en todas las vistas */
-footer.site-footer { display: none !important; } 
+/* Oculta footer original */
+footer.site-footer {
+  display: none !important;
+}
 
-/* ===== Footer propio (siempre visible) ===== */
-.custom-footer{
+/* ===== FOOTER PROPIO ===== */
+.custom-footer {
   margin-top: 3rem;
   padding-top: 1rem;
-  /* border-top: 1px solid #e5e7eb;     /* separador sutil */
-  color: #6B7280;                     /* gris medio */
+  color: #7C5A3C;
   font-size: 0.95rem;
   background: transparent;
 }
 
 .custom-footer a,
-.custom-footer a:visited{
-  color: #E00034;                     /* rojo IBERO */
-  text-decoration-color: rgba(224,0,52,.45);
+.custom-footer a:visited {
+  color: #D97706;
+  text-decoration-color: rgba(217, 119, 6, .45);
 }
 
-.custom-footer a:hover{
-  color: #b00028;
-  text-decoration-color: rgba(176,0,40,.65);
+.custom-footer a:hover {
+  color: #9A4D00;
+  text-decoration-color: rgba(154, 77, 0, .65);
 }
 
-.custom-footer__modified strong{
-  color: #4B5563;                     /* gris un poco más oscuro para el label */
+.custom-footer__modified strong {
+  color: #9A4D00;
 }
 
-/* Asegura legibilidad en móvil (fondo claro) */
-@media (max-width: 66rem){
-  .custom-footer{
-    background: #ffffff;
-    color: #6B7280;
+@media (max-width: 66rem) {
+  .custom-footer {
+    background: #FFFBF5;
+    color: #7C5A3C;
   }
 }
 
-/* ===== NAVBAR FIX (Just the Docs) =====
-   - Neutraliza pseudo-elementos globales en el sidebar para evitar "∞"
-   - Redibuja un bullet limpio solo en el 2º nivel
-*/
+/* ===== NAVBAR FIX ===== */
 .side-bar a::before,
 .side-bar a::after,
 .site-nav .nav-list-link::before,
@@ -280,36 +314,34 @@ footer.site-footer { display: none !important; }
   content: none !important;
 }
 
-/* Espacio para el bullet en hijos (nivel 2) */
+/* Espacio para bullet */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link {
   position: relative;
   padding-left: 1.6rem;
 }
 
-/* Bullet para nivel 2 (Unicode) */
+/* Bullet */
 .side-bar .nav-list .nav-list-item .nav-list .nav-list-link::before {
-  content: "\2022" !important;      /* bullet • */
+  content: "\2022" !important;
   position: absolute;
   left: 0.9rem;
   top: 50%;
   transform: translateY(-50%);
-  opacity: .6;
+  opacity: .7;
   font-size: .8rem;
   color: currentColor;
   font-variant-ligatures: none;
 }
-/* ===== END NAVBAR FIX ===== */
 
-/* Tamaño y espaciado del logo en el título del sitio */
+/* ===== LOGO ===== */
 .site-logo,
 .site-title img {
-  height: 28px;         /* ajusta a tu preferencia: 24–36px suele verse bien */
+  height: 28px;
   width: auto;
   vertical-align: middle;
   margin-right: .5rem;
 }
 
-/* Evita que el logo se “encime” en pantallas pequeñas */
 @media (max-width: 600px) {
   .site-logo,
   .site-title img {
@@ -317,6 +349,7 @@ footer.site-footer { display: none !important; }
   }
 }
 
+/* ===== VIDEO ===== */
 video {
   max-width: 100%;
   height: auto;
@@ -325,9 +358,9 @@ video {
 .responsive-embed {
   position: relative;
   width: 100%;
-  padding-top: 56.25%; /* 16:9 */
+  padding-top: 56.25%;
   overflow: hidden;
-  border-radius: 12px; /* opcional */
+  border-radius: 12px;
 }
 
 .responsive-embed iframe {
@@ -336,4 +369,10 @@ video {
   width: 100%;
   height: 100%;
   border: 0;
+}
+
+/* === OCULTAR LOGO DEL ENCABEZADO === */
+.site-logo,
+.site-title img {
+  display: none !important;
 }
