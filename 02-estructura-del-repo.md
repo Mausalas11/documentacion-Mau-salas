@@ -20,7 +20,7 @@ Primero se instala el Arduino IDE en la computadora y se conecta la placa Arduin
 # Lista de materiales:
 
 ## Arduino UNO:
-![Arduino UNO](assets/img/Tarea_1/material/PlacaArduino.jpeg)
+![Arduino UNO](assets/img/material/PlacaArduino.jpeg)
 
 Microcontrolador programable que controla el funcionamiento del proyecto mediante el código cargado desde la computadora.
 
