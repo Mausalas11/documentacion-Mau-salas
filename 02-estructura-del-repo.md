@@ -64,10 +64,6 @@ Es un motor con encoder que, gracias a este último, permite girar el eje a posi
 
 Resistencia variable que permite regular a manualmente la potencia que circule a través de él.
 
-## Fuente de poder:
-![Fuente](assets/img/Tarea_1/material/fuente.jpeg)
-
-Suministra la energía necesaria para alimentar el Arduino y los componentes del circuito.
 
 ## Push button (NO):
 ![Push button](assets/img/Tarea_1/material/boton.jpeg)
