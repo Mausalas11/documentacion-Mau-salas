@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Neon Velocity // Cyber Tron</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <main class="game-shell">
+    <header class="hud">
+      <div class="brand">NEON<span>VELOCITY</span></div>
+      <div class="stats">
+        <div><small>SCORE</small><strong id="score">000000</strong></div>
+        <div><small>BEST</small><strong id="best">000000</strong></div>
+        <div><small>VIDAS</small><strong id="lives">♥ ♥ ♥</strong></div>
+      </div>
+    </header>
+
+    <section class="stage-wrap">
+      <canvas id="game" width="1200" height="720" aria-label="Juego Neon Velocity"></canvas>
+
+      <div id="startScreen" class="overlay">
+        <div class="panel">
+          <p class="eyebrow">GRID SECTOR // 09</p>
+          <h1>NEON<br><span>VELOCITY</span></h1>
+          <p class="subtitle">LIGHT BIKE // SURVIVE THE GRID</p>
+          <button id="startBtn">INICIAR</button>
+          <div class="controls">
+            <span><b>W</b><b>A</b><b>S</b><b>D</b> mover</span>
+            <span><b>R</b> reiniciar</span>
+          </div>
+        </div>
+      </div>
+
+      <div id="gameOver" class="overlay hidden">
+        <div class="panel">
+          <p class="eyebrow">SIGNAL LOST</p>
+          <h2>GRID CRASH</h2>
+          <p>Puntuación: <strong id="finalScore">0</strong></p>
+          <button id="restartBtn">VOLVER A JUGAR</button>
+        </div>
+      </div>
+    </section>
+
+    <footer>WASD · CORTA EL CAMINO · SOBREVIVE · DOMINA EL GRID</footer>
+  </main>
+  <script src="game.js"></script>
+</body>
+</html>

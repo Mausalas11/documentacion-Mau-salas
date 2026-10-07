@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<defs>
+ <filter id="g"><feGaussianBlur stdDeviation="10" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+ <linearGradient id="c"><stop stop-color="#fff"/><stop offset=".35" stop-color="#00f6ff"/><stop offset="1" stop-color="#087bff"/></linearGradient>
+</defs>
+<rect width="800" height="450" fill="#02030a"/>
+<g filter="url(#g)" fill="none" stroke="#00f6ff" stroke-linecap="round">
+ <path stroke-width="18" opacity=".25" d="M80 270 C230 270 300 220 430 225 S630 260 740 170"/>
+ <path stroke-width="7" d="M80 270 C230 270 300 220 430 225 S630 260 740 170"/>
+</g>
+<g transform="translate(405 220)" filter="url(#g)">
+ <path fill="url(#c)" d="M150 0 30-55-70-32-125 0-70 32 30 55Z"/>
+ <path fill="#050a14" d="M85 0 20-27-52-17-82 0-52 17 20 27Z"/>
+ <path fill="#fff" d="M72-5h55v10H72z"/>
+ <circle cx="-45" cy="0" r="17" fill="#00f6ff"/>
+ <path fill="#00f6ff" d="M-130-4h-75v8h75z"/>
+</g>
+<text x="35" y="55" fill="#8ba6b5" font-family="monospace" font-size="16" letter-spacing="4">PLAYER // LIGHT BIKE</text>
+</svg>

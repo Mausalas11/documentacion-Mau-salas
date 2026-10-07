@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 450">
+<defs><filter id="g"><feGaussianBlur stdDeviation="9" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter><linearGradient id="p"><stop stop-color="#fff"/><stop offset=".35" stop-color="#ff168b"/><stop offset="1" stop-color="#8a2be2"/></linearGradient></defs>
+<rect width="800" height="450" fill="#02030a"/>
+<g transform="translate(400 225)" filter="url(#g)">
+ <path fill="url(#p)" d="M150 0 30-55-70-32-125 0-70 32 30 55Z"/>
+ <path fill="#090512" d="M85 0 20-27-52-17-82 0-52 17 20 27Z"/>
+ <path fill="#fff" d="M72-5h55v10H72z"/>
+ <circle cx="-45" cy="0" r="17" fill="#ff168b"/>
+ <path fill="#ff168b" d="M-130-4h-75v8h75z"/>
+</g>
+<g stroke="#ff168b" opacity=".22"><path d="M0 360h800"/><path d="M0 90h800"/></g>
+<text x="35" y="55" fill="#bda0b3" font-family="monospace" font-size="16" letter-spacing="4">HOSTILE // LIGHT BIKE</text>
+</svg>

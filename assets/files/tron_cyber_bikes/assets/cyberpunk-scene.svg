@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 700">
+<defs>
+ <linearGradient id="sky" x2="0" y2="1"><stop stop-color="#030419"/><stop offset="1" stop-color="#10021c"/></linearGradient>
+ <filter id="g"><feGaussianBlur stdDeviation="8" result="b"/><feMerge><feMergeNode in="b"/><feMergeNode in="SourceGraphic"/></feMerge></filter>
+</defs>
+<rect width="1200" height="700" fill="url(#sky)"/>
+<g stroke="#00f6ff" opacity=".16">
+<path d="M0 560h1200M0 610h1200M0 660h1200"/>
+<path d="M100 500 600 350M300 500 600 350M500 500 600 350M700 500 600 350M900 500 600 350M1100 500 600 350"/>
+</g>
+<g fill="none" stroke="#ff168b" filter="url(#g)" opacity=".65">
+ <path stroke-width="3" d="M120 480V270h80v210M260 480V180h100v300M430 480V240h70v240M720 480V210h110v270M910 480V150h80v330"/>
+</g>
+<g fill="#0a0e1b" stroke="#00f6ff" opacity=".85">
+ <path d="M0 480 70 330h100l40 150Z"/><path d="M190 480 240 290h130l35 190Z"/>
+ <path d="M810 480 850 250h130l50 230Z"/><path d="M1030 480 1090 300h110v180Z"/>
+</g>
+<text x="45" y="80" fill="#00f6ff" font-family="monospace" font-size="22" letter-spacing="7" filter="url(#g)">GRID SECTOR // 09</text>
+<text x="45" y="112" fill="#728b9b" font-family="monospace" font-size="11" letter-spacing="3">NEON VELOCITY — CYBERPUNK ARENA</text>
+</svg>
