@@ -25,7 +25,7 @@ Primero se instala el Arduino IDE en la computadora y se conecta la placa Arduin
 Microcontrolador programable que controla el funcionamiento del proyecto mediante el código cargado desde la computadora.
 
 ## Cable USB-A a USB-B:
-![Cable](assets/img/Tarea_1/material/cable.jpeg)
+![Cable](assets/img/cable-usb-a-usb-b.webp)
 
 Se usa para conectar el Arduino UNO a la computadora, cargar los programas y, proporcionar alimentación eléctrica.
 
