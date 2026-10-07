@@ -50,7 +50,7 @@ Diodo emisor de luz empleado para simular salidas de tipo High y Low.
 Componentes que limitan el paso de corriente y protegen los elementos electrónicos.
 
 ## Display de 7 segmentos:
-![Display](assets/img/Tarea_1/material/display.jpeg)
+![Display](assets/img/pantallita.jpg)
 
 Dispositivo formado por siete LEDs que permite mostrar números o letras.
 
