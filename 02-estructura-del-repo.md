@@ -35,7 +35,7 @@ Se usa para conectar el Arduino UNO a la computadora, cargar los programas y, pr
 Tablero de pruebas que permite crear circuitos eléctricos con distintos componentes.
 
 ## Jumpers:
-![Jumpers](assets/img/Tarea_1/material/jumpers.jpeg)
+![Jumpers](assets/img/jumpers.jpg)
 
 Cables que pueden unir lineas de la protoboard, hacer saltos entre ellas y conectarse a los pines del Arduino UNO.
 
