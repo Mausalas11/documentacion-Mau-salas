@@ -55,7 +55,7 @@ Componentes que limitan el paso de corriente y protegen los elementos electróni
 Dispositivo formado por siete LEDs que permite mostrar números o letras.
 
 ## Servomotor 9g:
-![Servo](assets/img/Tarea_1/material/servo9g.jpeg)
+![Servo](assets/img/images.jpg)
 
 Es un motor con encoder que, gracias a este último, permite girar el eje a posiciones específicas según la cantidad de voltaje que reciba, todo esto mediante la programación.
 
