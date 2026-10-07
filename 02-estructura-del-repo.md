@@ -45,7 +45,7 @@ Cables que pueden unir lineas de la protoboard, hacer saltos entre ellas y conec
 Diodo emisor de luz empleado para simular salidas de tipo High y Low.
 
 ## Resistencias:
-![Resistencia 1k Ohm](assets/img/resistencoa 1k.jpg) ![Resistencia 220 ohms](assets/img/Tarea_1/material/220_ohm.jpeg) 
+![Resistencia 1k Ohm](assets/img/resistencoa 1k.jpg) ![Resistencia 220 ohms](assets/img/resistencia 220.jpg) 
 
 Componentes que limitan el paso de corriente y protegen los elementos electrónicos.
 
