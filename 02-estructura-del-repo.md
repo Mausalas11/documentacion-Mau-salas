@@ -60,7 +60,7 @@ Dispositivo formado por siete LEDs que permite mostrar números o letras.
 Es un motor con encoder que, gracias a este último, permite girar el eje a posiciones específicas según la cantidad de voltaje que reciba, todo esto mediante la programación.
 
 ## Potenciómetro:
-![Potenciómetro](assets/img/Tarea_1/material/potenciometro.jpeg)
+![Potenciómetro](assets/img/potenciometro.jpg)
 
 Resistencia variable que permite regular a manualmente la potencia que circule a través de él.
 
