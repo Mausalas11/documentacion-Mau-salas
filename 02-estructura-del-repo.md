@@ -40,7 +40,7 @@ Tablero de pruebas que permite crear circuitos eléctricos con distintos compone
 Cables que pueden unir lineas de la protoboard, hacer saltos entre ellas y conectarse a los pines del Arduino UNO.
 
 ## LED:
-![LED](assets/img/Tarea_1/material/led.jpeg)
+![LED](assets/img/led.jpg)
 
 Diodo emisor de luz empleado para simular salidas de tipo High y Low.
 
