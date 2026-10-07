@@ -66,7 +66,7 @@ Resistencia variable que permite regular a manualmente la potencia que circule a
 
 
 ## Push button (NO):
-![Push button](assets/img/Tarea_1/material/boton.jpeg)
+![Push button](assets/img/boton.jpg)
 
 Botón que permite el flujo de corriente cuando se oprime debido a que se encuentra normalmente abierto (NO).
 
