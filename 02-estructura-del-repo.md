@@ -30,7 +30,7 @@ Microcontrolador programable que controla el funcionamiento del proyecto mediant
 Se usa para conectar el Arduino UNO a la computadora, cargar los programas y, proporcionar alimentación eléctrica.
 
 ## Protoboard:
-![Protoboard](assets/img/Tarea_1/material/protoboard.jpeg)
+![Protoboard](assets/img/proto.jpg)
 
 Tablero de pruebas que permite crear circuitos eléctricos con distintos componentes.
 
