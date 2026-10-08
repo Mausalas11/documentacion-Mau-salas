@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Neon Velocity | Juego</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div class="game-container">
+
+        <!-- HUD -->
+        <header class="hud">
+
+            <div class="logo">
+                NEON<span>VELOCITY</span>
+            </div>
+
+            <div class="stats">
+
+                <div class="stat">
+                    <span>SCORE</span>
+                    <strong id="score">000000</strong>
+                </div>
+
+                <div class="stat">
+                    <span>RECORD</span>
+                    <strong id="best">000000</strong>
+                </div>
+
+                <div class="stat">
+                    <span>VIDAS</span>
+                    <strong id="lives">♥ ♥ ♥</strong>
+                </div>
+
+            </div>
+
+        </header>
+
+
+        <!-- ÁREA DEL JUEGO -->
+
+        <div class="game-wrapper">
+
+            <canvas
+                id="gameCanvas"
+                width="1200"
+                height="700">
+            </canvas>
+
+
+            <!-- PANTALLA INICIAL -->
+
+            <div id="startScreen" class="screen">
+
+                <div class="menu">
+
+                    <div class="small-title">
+                        GRID SECTOR // 09
+                    </div>
+
+                    <h1>
+                        NEON<br>
+                        <span>VELOCITY</span>
+                    </h1>
+
+                    <p>
+                        LIGHT BIKE // CYBERPUNK SURVIVAL
+                    </p>
+
+                    <button id="startButton">
+                        INICIAR JUEGO
+                    </button>
+
+                    <div class="controls">
+
+                        <div>
+                            <b>W</b>
+                            <b>A</b>
+                            <b>S</b>
+                            <b>D</b>
+                            MOVER
+                        </div>
+
+                        <div>
+                            <b>R</b>
+                            REINICIAR
+                        </div>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- GAME OVER -->
+
+            <div id="gameOver" class="screen hidden">
+
+                <div class="menu">
+
+                    <div class="small-title">
+                        SIGNAL LOST
+                    </div>
+
+                    <h2>
+                        GAME OVER
+                    </h2>
+
+                    <p>
+                        PUNTUACIÓN FINAL:
+                        <strong id="finalScore">0</strong>
+                    </p>
+
+                    <button id="restartButton">
+                        VOLVER A JUGAR
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+
+        <footer>
+
+            WASD · SOBREVIVE · DEJA TU ESTELA · DOMINA EL GRID
+
+        </footer>
+
+    </div>
+
+
+    <script src="game.js"></script>
+
+</body>
+</html>
