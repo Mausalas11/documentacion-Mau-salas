@@ -1,3 +1,12 @@
+---
+layout: default
+title: "Uso de la IA"
+nav_order: 6
+---
+
+# Elaboración de un cubo 
+## Semana 5
+
 documentacion-Mau-salas/
 │
 ├── index.md
