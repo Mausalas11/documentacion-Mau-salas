@@ -1,0 +1,443 @@
+* {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+:root {
+
+    --cyan: #00f7ff;
+    --pink: #ff168b;
+    --purple: #8b2cff;
+
+    --background: #02030a;
+    --panel: rgba(4, 7, 20, 0.92);
+
+}
+
+body {
+
+    min-height: 100vh;
+
+    background:
+        radial-gradient(
+            circle at center,
+            #111438 0%,
+            #050716 45%,
+            #02030a 100%
+        );
+
+    color: white;
+
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    overflow-x: hidden;
+
+}
+
+
+.game-container {
+
+    width: min(1250px, 100%);
+
+    padding: 15px;
+
+}
+
+
+/* =========================
+   HUD
+========================= */
+
+.hud {
+
+    height: 70px;
+
+    border: 1px solid
+        rgba(0, 247, 255, .35);
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+
+    padding: 0 25px;
+
+    background:
+        linear-gradient(
+            90deg,
+            rgba(0, 247, 255, .06),
+            rgba(255, 22, 139, .06)
+        );
+
+    box-shadow:
+        0 0 25px
+        rgba(0, 247, 255, .12);
+
+}
+
+
+.logo {
+
+    color: var(--cyan);
+
+    font-size: 22px;
+
+    font-weight: 900;
+
+    letter-spacing: 4px;
+
+    text-shadow:
+        0 0 10px var(--cyan);
+
+}
+
+.logo span {
+
+    color: white;
+
+}
+
+
+.stats {
+
+    display: flex;
+
+    gap: 30px;
+
+}
+
+
+.stat {
+
+    text-align: center;
+
+}
+
+
+.stat span {
+
+    display: block;
+
+    font-size: 9px;
+
+    color: #718392;
+
+    letter-spacing: 2px;
+
+    margin-bottom: 5px;
+
+}
+
+
+.stat strong {
+
+    font-size: 15px;
+
+    color: white;
+
+    text-shadow:
+        0 0 8px var(--cyan);
+
+}
+
+
+/* =========================
+   GAME
+========================= */
+
+.game-wrapper {
+
+    position: relative;
+
+    margin-top: 10px;
+
+    border:
+        1px solid
+        rgba(0, 247, 255, .35);
+
+    box-shadow:
+        0 0 50px
+        rgba(0, 247, 255, .12);
+
+}
+
+
+canvas {
+
+    width: 100%;
+
+    height: auto;
+
+    display: block;
+
+    background: #02030a;
+
+}
+
+
+/* =========================
+   MENÚ
+========================= */
+
+.screen {
+
+    position: absolute;
+
+    inset: 0;
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: center;
+
+    background:
+        rgba(1, 2, 10, .80);
+
+    backdrop-filter: blur(3px);
+
+}
+
+
+.hidden {
+
+    display: none;
+
+}
+
+
+.menu {
+
+    width: min(650px, 90%);
+
+    text-align: center;
+
+    padding: 50px 30px;
+
+    background: var(--panel);
+
+    border:
+        1px solid
+        rgba(0, 247, 255, .4);
+
+    box-shadow:
+        0 0 50px
+        rgba(0, 247, 255, .15);
+
+}
+
+
+.small-title {
+
+    color: var(--pink);
+
+    font-size: 11px;
+
+    letter-spacing: 5px;
+
+    margin-bottom: 15px;
+
+}
+
+
+h1 {
+
+    font-size:
+        clamp(45px, 8vw, 90px);
+
+    line-height: .85;
+
+    letter-spacing: 5px;
+
+    text-shadow:
+        0 0 20px
+        rgba(0, 247, 255, .5);
+
+}
+
+
+h1 span {
+
+    color: var(--cyan);
+
+}
+
+
+h2 {
+
+    font-size: 55px;
+
+    color: var(--pink);
+
+    text-shadow:
+        0 0 20px var(--pink);
+
+}
+
+
+.menu p {
+
+    margin: 25px 0;
+
+    color: #91a5b3;
+
+    font-size: 11px;
+
+    letter-spacing: 3px;
+
+}
+
+
+button {
+
+    padding:
+        15px 35px;
+
+    border:
+        1px solid
+        var(--cyan);
+
+    background:
+        rgba(0, 247, 255, .05);
+
+    color:
+        var(--cyan);
+
+    font-weight: bold;
+
+    letter-spacing: 3px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+button:hover {
+
+    background:
+        var(--cyan);
+
+    color: #02030a;
+
+    box-shadow:
+        0 0 30px
+        rgba(0, 247, 255, .6);
+
+}
+
+
+.controls {
+
+    margin-top: 30px;
+
+    color: #728391;
+
+    font-size: 10px;
+
+    letter-spacing: 1px;
+
+}
+
+
+.controls div {
+
+    margin: 10px;
+
+}
+
+
+.controls b {
+
+    display: inline-flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    width: 25px;
+
+    height: 25px;
+
+    border:
+        1px solid #53636d;
+
+    margin: 2px;
+
+    color: white;
+
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    text-align: center;
+
+    padding: 10px;
+
+    color: #4e626e;
+
+    font-size: 9px;
+
+    letter-spacing: 3px;
+
+}
+
+
+/* =========================
+   CELULARES
+========================= */
+
+@media(max-width:700px) {
+
+    .hud {
+
+        height: 60px;
+
+        padding: 0 10px;
+
+    }
+
+    .logo {
+
+        font-size: 12px;
+
+        letter-spacing: 2px;
+
+    }
+
+    .stats {
+
+        gap: 8px;
+
+    }
+
+    .stat span {
+
+        font-size: 7px;
+
+    }
+
+    .stat strong {
+
+        font-size: 10px;
+
+    }
+
+}
