@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "Semana 1: Elaboración del Cubo"
+title: "Elaboración del Cubo"
 nav_order: 4
 ---
 
