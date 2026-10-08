@@ -1,6 +1,6 @@
 layout: default
 title: Elaboracion cubo
-nav_order: 5
+nav_order: 4
 
 # Elaboración de un cubo 
 ## Semana 4
