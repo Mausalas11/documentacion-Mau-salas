@@ -4,8 +4,12 @@ title: "Uso de la IA"
 nav_order: 6
 ---
 
-# Elaboración de un cubo 
-## Semana 5
+git init
+git add .
+git commit -m "Crear Neon Velocity"
+git branch -M main
+git remote add origin https://github.com/TU-USUARIO/TU-REPOSITORIO.git
+git push -u origin main
 
 documentacion-Mau-salas/
 │
