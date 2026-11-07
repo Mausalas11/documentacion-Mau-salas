@@ -1,5 +1,5 @@
 ---
 layout: default
-title: "Uso de la IA"
+title: "Impresion 3D"
 nav_order: 7
 ---
