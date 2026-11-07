@@ -1229,39 +1229,41 @@ function hitTrail(
     x,
     y,
     trail,
-    skip
+    skip = 0,
+    radius = 16
 ) {
+    const points = trail.points;
+    const limit = Math.max(0, points.length - skip);
 
-    const points =
-        trail.points;
+    if (limit === 0) return false;
 
+    // Revisa la distancia a cada segmento de la estela,
+    // no solamente a los puntos de muestreo.
+    for (let i = 0; i < limit - 1; i++) {
+        const a = points[i];
+        const b = points[i + 1];
 
-    for(
-        let i = 0;
-        i <
-        points.length - skip;
-        i += 2
-    ) {
+        const dx = b.x - a.x;
+        const dy = b.y - a.y;
+        const lengthSquared = dx * dx + dy * dy;
 
-        const point =
-            points[i];
+        let t = lengthSquared === 0
+            ? 0
+            : ((x - a.x) * dx + (y - a.y) * dy) / lengthSquared;
 
+        t = Math.max(0, Math.min(1, t));
 
-        const distance =
-            Math.hypot(
-                x - point.x,
-                y - point.y
-            );
+        const closestX = a.x + t * dx;
+        const closestY = a.y + t * dy;
 
-
-        if(distance < 13)
+        if (Math.hypot(x - closestX, y - closestY) < radius) {
             return true;
-
+        }
     }
 
-
-    return false;
-
+    // Incluye también el último punto disponible.
+    const last = points[limit - 1];
+    return Math.hypot(x - last.x, y - last.y) < radius;
 }
 
 
@@ -1454,31 +1456,10 @@ function update(delta) {
                 player.x,
                 player.y,
                 enemy.trail,
-                5
+                5,
+                20
             )
         ) {
-        
-            playerCrash();
-            break;
-        }
-    }
-
-
-    /*
-    COLISIÓN DEL JUGADOR CON ESTELAS ENEMIGAS
-    */
-
-    for (const enemy of enemies) {
-        if (
-            enemy.alive &&
-            hitTrail(
-                player.x,
-                player.y,
-                enemy.trail,
-                5
-            )
-        ) {
-        
             playerCrash();
             break;
         }
