@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Tarea 1
+title: Arduino - Tarea 1
 nav_order: 3
 ---
 # Tarea 1
