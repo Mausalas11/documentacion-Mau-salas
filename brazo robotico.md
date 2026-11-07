@@ -1,6 +1,6 @@
 ---
 layout: default
-title: "06 · Brazo robótico"
+title: "Brazo robótico"
 nav_order: 5
 permalink: /06-brazo/
 ---
