@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Uso de IA en la elaboración de este manual
+title: Uso de IA
 ---
 
 # Sobre la elaboración de este manual
