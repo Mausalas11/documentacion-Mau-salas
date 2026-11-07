@@ -16,12 +16,12 @@ Como parte de los proyectos de este portafolio, aquí puedes probar **Neon Veloc
 
 <div class="neon-game-embed">
   <iframe
-    src="{{ '/juego/juego%20/index.html' | relative_url }}"
+    src="{{ '/juego/neon-velocity/' | relative_url }}"
     title="Videojuego Neon Velocity"
     loading="lazy"
     allow="fullscreen"
-    style="display:block;width:100%;height: min(72vw, 700px);min-height:420px;border:0;border-radius:12px;background:#080a16;"
+    style="display:block;width:100%;height:min(72vw,700px);min-height:420px;border:0;border-radius:12px;background:#080a16;"
   ></iframe>
 </div>
 
-[**Abrir Neon Velocity en una ventana independiente**]({{ '/juego/juego%20/index.html' | relative_url }})
+[**Abrir Neon Velocity en una ventana independiente**]({{ '/juego/neon-velocity/' | relative_url }})
