@@ -2,6 +2,7 @@
 layout: default
 title: Arduino - Tarea 1
 nav_order: 3
+permalink: /arduino-practicas/
 ---
 # Tarea 1
 
