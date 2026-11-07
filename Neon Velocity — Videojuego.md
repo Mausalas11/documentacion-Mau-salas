@@ -2,6 +2,7 @@
 layout: default
 title: Video Juego con IA
 nav_order: 6
+permalink: /neon-velocity/
 ---
 
 # NEON VELOCITY
