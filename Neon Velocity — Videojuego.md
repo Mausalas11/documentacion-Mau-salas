@@ -144,17 +144,6 @@ En este archivo se encuentran:
 * Animaciones.
 * Game Loop.
 
-## Publicación mediante GitHub Pages
-
-Después de desarrollar y probar el videojuego, los archivos fueron incorporados al repositorio de GitHub.
-
-GitHub Pages permite convertir el repositorio en un sitio web accesible desde Internet.
-
-La página del videojuego se encuentra dentro de la carpeta `juego`, por lo que puede accederse mediante:
-
-**https://mausalas11.github.io/documentacion-Mau-salas/juego/**
-
-De esta manera, el proyecto no necesita un servidor externo para funcionar.
 
 ## Conclusión
 
