@@ -1,7 +1,6 @@
 ---
 layout: default
 title: Uso de IA en la elaboración de este manual
-nav_exclude: true
 ---
 
 # Sobre la elaboración de este manual
