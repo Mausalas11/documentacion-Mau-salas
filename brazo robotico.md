@@ -5,7 +5,7 @@ nav_order: 5
 permalink: /06-brazo/
 ---
 
-# 06 — Brazo robótico controlado con Arduino
+# Brazo robótico controlado con Arduino
 
 ## Introducción
 
