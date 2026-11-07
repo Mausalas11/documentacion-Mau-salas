@@ -2,6 +2,7 @@
 layout: default
 title: "Semana 1: Portafolio web"
 nav_order: 2
+permalink: /semana-1-portafolio/
 ---
 
 # Semana 1: Portafolio web
