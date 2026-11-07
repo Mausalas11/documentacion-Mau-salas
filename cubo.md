@@ -2,6 +2,7 @@
 layout: default
 title: "Elaboración del Cubo"
 nav_order: 4
+permalink: /cubo/
 ---
 
 # Elaboración de un cubo 
