@@ -27,6 +27,13 @@ Este portafolio tiene como objetivo documentar parte de mi desarrollo académico
 
 Además de mantener mis trabajos organizados, este espacio permitirá observar mi progreso y los conocimientos que vaya adquiriendo a lo largo del tiempo.
 
-Contenido:
-- [Semana 1:Portafolio web](01-portafolio-web.md)
-  - [Semana 1: Portafolio web]({{ '/01-portafolio-web.html' | relative_url }}
+## Contenido
+
+Selecciona cualquiera de los apartados para abrir directamente su contenido:
+
+- [Semana 1: Portafolio web]({% link 01-publicar-en-github-pages.md %})
+- [Tarea 1: Arduino y prácticas]({% link 02-estructura-del-repo.md %})
+- [Semana 4: Elaboración de un cubo]({% link cubo.md %})
+- [Proyecto: Brazo robótico]({% link brazo robotico.md %})
+- [Proyecto: Neon Velocity, videojuego]({% link Neon Velocity — Videojuego.md %})
+- [Impresión 3D]({% link Impresion 3D.md %})
