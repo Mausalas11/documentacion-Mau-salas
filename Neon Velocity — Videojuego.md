@@ -1,6 +1,6 @@
 ---
 layout: default
-title: Neon Velocity
+title: Video Juego con IA
 nav_order: 6
 ---
 
