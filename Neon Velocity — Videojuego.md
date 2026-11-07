@@ -1,10 +1,26 @@
 ---
 layout: default
-title: "Uso de la IA"
+title: Neon Velocity
 nav_order: 6
 ---
 
 # NEON VELOCITY
+
+## Demo interactiva
+
+Aquí puedes jugar **Neon Velocity** directamente dentro de esta página. Haz clic en el área del juego para comenzar y utiliza las teclas **W, A, S y D** para moverte; presiona **R** para reiniciar.
+
+<div class="neon-game-embed">
+  <iframe
+    src="https://mausalas11.github.io/documentacion-Mau-salas/juego/neon-velocity/"
+    title="Videojuego Neon Velocity, jugable dentro de la página"
+    loading="eager"
+    allow="fullscreen"
+    style="display:block;width:100%;height:clamp(460px,75vw,760px);min-height:460px;border:0;border-radius:12px;background:#080a16;"
+  ></iframe>
+</div>
+
+[**Abrir Neon Velocity en una ventana independiente**]({{ '/juego/neon-velocity/' | relative_url }})
 
 ## Descripción del proyecto
 
