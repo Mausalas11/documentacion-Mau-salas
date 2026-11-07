@@ -1465,6 +1465,27 @@ function update(delta) {
 
 
     /*
+    COLISIÓN DEL JUGADOR CON ESTELAS ENEMIGAS
+    */
+
+    for (const enemy of enemies) {
+        if (
+            enemy.alive &&
+            hitTrail(
+                player.x,
+                player.y,
+                enemy.trail,
+                5
+            )
+        ) {
+        
+            playerCrash();
+            break;
+        }
+    }
+
+
+    /*
     ENEMIGOS
     */
 
