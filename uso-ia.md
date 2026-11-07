@@ -16,11 +16,11 @@ Como parte de los proyectos de este portafolio, aquí puedes probar **Neon Veloc
 
 <div class="neon-game-embed">
   <iframe
-    src="{{ '/juego/neon-velocity/' | relative_url }}"
-    title="Videojuego Neon Velocity"
-    loading="lazy"
+    src="https://mausalas11.github.io/documentacion-Mau-salas/juego/neon-velocity/"
+    title="Videojuego Neon Velocity, jugable dentro de la página"
+    loading="eager"
     allow="fullscreen"
-    style="display:block;width:100%;height:min(72vw,700px);min-height:420px;border:0;border-radius:12px;background:#080a16;"
+    style="display:block;width:100%;height:clamp(460px,75vw,760px);min-height:460px;border:0;border-radius:12px;background:#080a16;"
   ></iframe>
 </div>
 
