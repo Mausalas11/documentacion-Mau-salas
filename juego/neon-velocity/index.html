@@ -799,6 +799,9 @@ class Bike {
 
         this.alive = true;
 
+        // Intervalo de decisión para que la IA no cambie de rumbo en cada frame.
+        this.aiTimer = 0.7 + Math.random() * 0.8;
+
         this.trail =
             new Trail(
                 x,
@@ -1325,61 +1328,39 @@ function playerCrash() {
    IA ENEMIGOS
 ========================= */
 
-function enemyAI(enemy) {
+function enemyAI(enemy, delta) {
 
-    const margin = 90;
+    // La IA toma decisiones en intervalos, no continuamente.
+    enemy.aiTimer -= delta;
+    if (enemy.aiTimer > 0) return;
+    enemy.aiTimer = 0.75 + Math.random() * 0.9;
 
+    const direction = enemy.direction;
+    const margin = 75;
+    let preferred = null;
 
-    const nearBorder =
-        enemy.x < margin ||
-        enemy.x >
-            WIDTH - margin ||
-        enemy.y < margin ||
-        enemy.y >
-            HEIGHT - margin;
-
-
-    if(
-        nearBorder ||
-        Math.random() < .01
-    ) {
-
-        const possible = [];
-
-
-        if(enemy.direction.x !== 0) {
-
-            possible.push(
-                DIRECTIONS.up,
-                DIRECTIONS.down
-            );
-
-        }
-
-        else {
-
-            possible.push(
-                DIRECTIONS.left,
-                DIRECTIONS.right
-            );
-
-        }
-
-
-        const direction =
-            possible[
-                Math.floor(
-                    Math.random() *
-                    possible.length
-                )
-            ];
-
-
-        enemy.changeDirection(
-            direction
-        );
-
+    // Prioriza alejarse de los bordes laterales o superiores/inferiores.
+    if (direction.x !== 0) {
+        if (enemy.y < margin) preferred = DIRECTIONS.down;
+        else if (enemy.y > HEIGHT - margin) preferred = DIRECTIONS.up;
+        else if (enemy.x > WIDTH - 65 && direction.x > 0) preferred = Math.random() < 0.5 ? DIRECTIONS.up : DIRECTIONS.down;
+        else if (enemy.x < 65 && direction.x < 0) preferred = Math.random() < 0.5 ? DIRECTIONS.up : DIRECTIONS.down;
+    } else {
+        if (enemy.x < margin) preferred = DIRECTIONS.right;
+        else if (enemy.x > WIDTH - margin) preferred = DIRECTIONS.left;
+        else if (enemy.y > HEIGHT - 65 && direction.y > 0) preferred = Math.random() < 0.5 ? DIRECTIONS.left : DIRECTIONS.right;
+        else if (enemy.y < 65 && direction.y < 0) preferred = Math.random() < 0.5 ? DIRECTIONS.left : DIRECTIONS.right;
     }
+
+    // En zona segura, realiza giros perpendiculares ocasionales.
+    if (!preferred && Math.random() < 0.58) {
+        const possible = direction.x !== 0
+            ? [DIRECTIONS.up, DIRECTIONS.down]
+            : [DIRECTIONS.left, DIRECTIONS.right];
+        preferred = possible[Math.floor(Math.random() * possible.length)];
+    }
+
+    if (preferred) enemy.changeDirection(preferred);
 
 }
 
@@ -1469,7 +1450,7 @@ function update(delta) {
     enemies.forEach(
         enemy => {
 
-            enemyAI(enemy);
+            enemyAI(enemy, delta);
 
             enemy.update(delta);
 
