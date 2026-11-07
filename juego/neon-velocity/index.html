@@ -1268,14 +1268,16 @@ function hitTrail(
 
 
 /* Comprueba todo el recorrido del jugador entre dos frames contra una estela. */
-function sweptHitTrail(x0, y0, x1, y1, trail, skip = 0, radius = 24) {
+function sweptHitTrail(x0, y0, x1, y1, trail, skip = 0, radius = 17) {
+    // Recorre el desplazamiento del jugador en pasos de 1 px y compara
+    // contra todos los segmentos de la estela, incluidos los más recientes.
     const distance = Math.hypot(x1 - x0, y1 - y0);
-    const steps = Math.max(1, Math.ceil(distance / 2));
+    const steps = Math.max(1, Math.ceil(distance));
     for (let i = 0; i <= steps; i++) {
         const t = i / steps;
         const x = x0 + (x1 - x0) * t;
         const y = y0 + (y1 - y0) * t;
-        if (hitTrail(x, y, trail, skip, radius)) return true;
+        if (hitTrail(x, y, trail, 0, radius)) return true;
     }
     return false;
 }
@@ -1344,41 +1346,39 @@ function playerCrash() {
 ========================= */
 
 function enemyAI(enemy, delta) {
-
-    // La IA toma decisiones en intervalos, no continuamente.
-    enemy.aiTimer -= delta;
-    if (enemy.aiTimer > 0) return;
-    enemy.aiTimer = 0.75 + Math.random() * 0.9;
-
     const direction = enemy.direction;
-    const margin = 75;
-    let preferred = null;
+    const safe = 95;
+    let urgentTurn = null;
 
-    // Prioriza alejarse de los bordes laterales o superiores/inferiores.
-    if (direction.x !== 0) {
-        if (enemy.y < margin) preferred = DIRECTIONS.down;
-        else if (enemy.y > HEIGHT - margin) preferred = DIRECTIONS.up;
-        else if (enemy.x > WIDTH - 65 && direction.x > 0) preferred = Math.random() < 0.5 ? DIRECTIONS.up : DIRECTIONS.down;
-        else if (enemy.x < 65 && direction.x < 0) preferred = Math.random() < 0.5 ? DIRECTIONS.up : DIRECTIONS.down;
-    } else {
-        if (enemy.x < margin) preferred = DIRECTIONS.right;
-        else if (enemy.x > WIDTH - margin) preferred = DIRECTIONS.left;
-        else if (enemy.y > HEIGHT - 65 && direction.y > 0) preferred = Math.random() < 0.5 ? DIRECTIONS.left : DIRECTIONS.right;
-        else if (enemy.y < 65 && direction.y < 0) preferred = Math.random() < 0.5 ? DIRECTIONS.left : DIRECTIONS.right;
+    // Giro preventivo hacia el interior antes de alcanzar cualquier borde.
+    if (direction.x > 0 && enemy.x >= WIDTH - safe) {
+        urgentTurn = enemy.y < HEIGHT / 2 ? DIRECTIONS.down : DIRECTIONS.up;
+    } else if (direction.x < 0 && enemy.x <= safe) {
+        urgentTurn = enemy.y < HEIGHT / 2 ? DIRECTIONS.down : DIRECTIONS.up;
+    } else if (direction.y > 0 && enemy.y >= HEIGHT - safe) {
+        urgentTurn = enemy.x < WIDTH / 2 ? DIRECTIONS.right : DIRECTIONS.left;
+    } else if (direction.y < 0 && enemy.y <= safe) {
+        urgentTurn = enemy.x < WIDTH / 2 ? DIRECTIONS.right : DIRECTIONS.left;
     }
 
-    // En zona segura, realiza giros perpendiculares ocasionales.
-    if (!preferred && Math.random() < 0.58) {
+    if (urgentTurn) {
+        enemy.changeDirection(urgentTurn);
+        enemy.aiTimer = 0.35;
+        return;
+    }
+
+    // Las decisiones normales siguen espaciadas para evitar movimientos erráticos.
+    enemy.aiTimer -= delta;
+    if (enemy.aiTimer > 0) return;
+    enemy.aiTimer = 0.8 + Math.random() * 0.8;
+
+    if (Math.random() < 0.58) {
         const possible = direction.x !== 0
             ? [DIRECTIONS.up, DIRECTIONS.down]
             : [DIRECTIONS.left, DIRECTIONS.right];
-        preferred = possible[Math.floor(Math.random() * possible.length)];
+        enemy.changeDirection(possible[Math.floor(Math.random() * possible.length)]);
     }
-
-    if (preferred) enemy.changeDirection(preferred);
-
 }
-
 
 /* =========================
    UPDATE
@@ -1473,8 +1473,8 @@ function update(delta) {
                 player.x,
                 player.y,
                 enemy.trail,
-                1,
-                26
+                0,
+                17
             )
         ) {
             playerCrash();
@@ -1499,24 +1499,23 @@ function update(delta) {
             SI SALE DEL MAPA
             */
 
-            if(
-                enemy.x < 25 ||
-                enemy.x >
-                    WIDTH - 25 ||
-                enemy.y < 25 ||
-                enemy.y >
-                    HEIGHT - 25
-            ) {
-
-                enemy.direction = {
-
-                    x:
-                        -enemy.direction.x,
-
-                    y:
-                        -enemy.direction.y
-
-                };
+            // Salvaguarda contra salidas del campo: recoloca y orienta
+            // la moto hacia el interior para que nunca quede atrapada fuera.
+            const edge = 32;
+            if (enemy.x < edge) {
+                enemy.x = edge;
+                enemy.changeDirection(DIRECTIONS.down);
+            } else if (enemy.x > WIDTH - edge) {
+                enemy.x = WIDTH - edge;
+                enemy.changeDirection(DIRECTIONS.up);
+            }
+            if (enemy.y < edge) {
+                enemy.y = edge;
+                enemy.changeDirection(DIRECTIONS.right);
+            } else if (enemy.y > HEIGHT - edge) {
+                enemy.y = HEIGHT - edge;
+                enemy.changeDirection(DIRECTIONS.left);
+            };
 
                 enemy.nextDirection =
                     enemy.direction;
