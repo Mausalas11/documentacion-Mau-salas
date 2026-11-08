@@ -11,6 +11,7 @@ nav_order: 1
     <div class="bio-photo-placeholder">
       <span>📷<br>ESPACIO PARA TU FOTO</span>
     </div>
+    <a class="bio-instagram" href="https://www.instagram.com/mausalase11/" target="_blank" rel="noopener noreferrer">📷 Instagram: @mausalase11</a>
   </div>
   <div class="bio-text">
     <p>Mi nombre es Mauricio Salas Espinosa, nacido en CDMX y actualmente me dedico a ser estudiante de tiempo completo en la Universidad Iberoamericana de la CDMX, cursando la carrera de ingenieria en mecatroncia y sistemas ciberfisicos.</p>
@@ -19,7 +20,6 @@ nav_order: 1
 
     <p>Otras de mis pasiones son los videojuegos que los eh amado desde muy pequeño y me han esyado presentes en toda mi niñez.</p>
 
-    <a class="bio-instagram" href="https://www.instagram.com/mausalase11/" target="_blank" rel="noopener noreferrer">📷 Instagram: @mausalase11</a>
   </div>
 </div>
 
