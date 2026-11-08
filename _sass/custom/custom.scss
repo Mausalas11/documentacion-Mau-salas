@@ -1,40 +1,25 @@
-/* IBERO cyan theme + logo next to the original title */
-.side-bar {
-  background-color: #008EAD !important;
-}
+/* One small IBERO logo beside the original site title. */
 .side-bar .site-title {
-  display: flex;
+  display: flex !important;
   align-items: center;
   gap: 10px;
-  color: #ffffff !important;
-  font-size: 1.2rem;
-  line-height: 1.2;
+  color: #fff !important;
+}
+.side-bar .site-title .site-logo,
+.side-bar .site-title img,
+.side-bar .site-header .site-logo {
+  display: none !important;
 }
 .side-bar .site-title::before {
-  content: "";
-  display: inline-block;
+  content: "" !important;
+  display: block !important;
+  flex: 0 0 58px;
   width: 58px;
   height: 40px;
-  flex: 0 0 58px;
-  background-image: url("../images/logo-ibero.jpg");
-  background-size: contain;
-  background-position: center;
-  background-repeat: no-repeat;
+  background: url("/documentacion-Mau-salas/assets/images/logo-ibero.jpg?v=2") center / contain no-repeat !important;
 }
-.site-header {
-  background-color: #008EAD !important;
-}
-.page-content {
-  background-color: #F3FCFE;
-}
+.side-bar, .side-bar .site-header { background-color: #008EAD !important; }
+.page-content { background-color: #F3FCFE; }
 a, a:visited { color: #007F9B; }
 a:hover { color: #00596D; }
-.side-bar .nav-list-link,
-.side-bar .site-nav a,
-.side-bar .site-footer {
-  color: #ffffff !important;
-}
-.side-bar .nav-list-link:hover,
-.side-bar .nav-list-link.active {
-  background-color: rgba(255,255,255,.18) !important;
-}
+.side-bar .nav-list-link, .side-bar .site-footer, .side-bar .site-footer a { color: #fff !important; }
