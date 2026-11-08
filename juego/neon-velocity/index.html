@@ -2041,16 +2041,28 @@ window.addEventListener(
    BOTONES
 ========================= */
 
-startButton.addEventListener(
-    "click",
-    startGame
-);
+// Activación compatible con mouse, pantalla táctil y navegadores dentro de iframes.
+// pointerup cubre los casos en los que el click no llega a dispararse.
+function activateGameButton(event) {
+    if (event.type === "pointerup" && event.pointerType === "mouse" && event.button !== 0) {
+        return;
+    }
 
+    // Evita que pointerup + click inicien dos veces la misma partida.
+    if (gameRunning) {
+        event.preventDefault();
+        return;
+    }
 
-restartButton.addEventListener(
-    "click",
-    startGame
-);
+    event.preventDefault();
+    startGame();
+}
+
+startButton.addEventListener("pointerup", activateGameButton, true);
+startButton.addEventListener("click", activateGameButton);
+
+restartButton.addEventListener("pointerup", activateGameButton, true);
+restartButton.addEventListener("click", activateGameButton);
 
 
 
