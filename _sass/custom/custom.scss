@@ -1,0 +1,16 @@
+/* IBERO cyan theme refinements for Just the Docs */
+:root {
+  --ibero-cyan: #009FC2;
+}
+.side-bar, .site-header {
+  background-color: #008EAD;
+}
+.side-bar .site-title {
+  color: #fff;
+}
+.page-content {
+  background: #F3FCFE;
+}
+a, a:visited { color: #007F9B; }
+a:hover { color: #00596D; }
+.site-footer { color: #EAFBFF; }

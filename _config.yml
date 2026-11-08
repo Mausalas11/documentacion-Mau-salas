@@ -1,4 +1,6 @@
 title: Portafolio
+logo: "/assets/images/logo-ibero.jpg"
+color_scheme: ibero_cyan
 description: Repositorio base para enseñar y crear documentación en GitHub Pages con Just the Docs
 
 # GitHub Pages: modo recomendado
@@ -16,9 +18,6 @@ baseurl: "/documentacion-Mau-salas"
 
 #Configuracion Formato, Header y Footer
 just_the_docs:
-  # incluir CSS adicional
-  custom_css:
-    - "assets/css/custom.css"
   footer_content: ""
 
 search_enabled: true
