@@ -7,8 +7,10 @@ nav_order: 1
 # Autobiografía Mauricio Salas Espinosa
 
 <div class="bio-layout">
-  <div class="bio-photo-placeholder">
-    <span>📷<br>ESPACIO PARA TU FOTO</span>
+  <div class="bio-profile">
+    <div class="bio-photo-placeholder">
+      <span>📷<br>ESPACIO PARA TU FOTO</span>
+    </div>
   </div>
   <div class="bio-text">
     <p>Mi nombre es Mauricio Salas Espinosa, nacido en CDMX y actualmente me dedico a ser estudiante de tiempo completo en la Universidad Iberoamericana de la CDMX, cursando la carrera de ingenieria en mecatroncia y sistemas ciberfisicos.</p>
