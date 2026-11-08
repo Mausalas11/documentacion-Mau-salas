@@ -552,12 +552,26 @@ let score = 0;
 
 let lives = 3;
 
-let best =
-    Number(
-        localStorage.getItem(
-            "neonVelocityBest"
-        )
-    ) || 0;
+// En algunos navegadores, los juegos abiertos dentro de un iframe
+// no tienen acceso a localStorage. Si eso ocurre, el juego debe
+// seguir funcionando y simplemente conservar el récord durante la sesión.
+function loadBestScore() {
+    try {
+        return Number(window.localStorage.getItem("neonVelocityBest")) || 0;
+    } catch (error) {
+        return 0;
+    }
+}
+
+function saveBestScore(value) {
+    try {
+        window.localStorage.setItem("neonVelocityBest", String(value));
+    } catch (error) {
+        // El almacenamiento puede estar bloqueado en iframes o navegación privada.
+    }
+}
+
+let best = loadBestScore();
 
 let difficulty = 1;
 
@@ -1957,10 +1971,7 @@ function gameOver() {
             finalScore;
 
 
-        localStorage.setItem(
-            "neonVelocityBest",
-            best
-        );
+        saveBestScore(best);
 
     }
 
