@@ -1501,100 +1501,43 @@ function update(delta) {
     ENEMIGOS
     */
 
-    enemies.forEach(
-        enemy => {
+    enemies.forEach(enemy => {
+        enemyAI(enemy, delta);
+        enemy.update(delta);
 
-            enemyAI(enemy, delta);
-
-            enemy.update(delta);
-
-
-            /*
-            SI SALE DEL MAPA
-            */
-
-            // Salvaguarda contra salidas del campo: recoloca y orienta
-            // la moto hacia el interior para que nunca quede atrapada fuera.
-            const edge = 32;
-            if (enemy.x < edge) {
-                enemy.x = edge;
-                enemy.changeDirection(DIRECTIONS.down);
-            } else if (enemy.x > WIDTH - edge) {
-                enemy.x = WIDTH - edge;
-                enemy.changeDirection(DIRECTIONS.up);
-            }
-            if (enemy.y < edge) {
-                enemy.y = edge;
-                enemy.changeDirection(DIRECTIONS.right);
-            } else if (enemy.y > HEIGHT - edge) {
-                enemy.y = HEIGHT - edge;
-                enemy.changeDirection(DIRECTIONS.left);
-            };
-
-                enemy.nextDirection =
-                    enemy.direction;
-
-            }
-
-
-            /*
-            ENEMIGO CONTRA ESTELA
-            */
-
-            if(
-                hitTrail(
-                    enemy.x,
-                    enemy.y,
-                    player.trail,
-                    20
-                )
-            ) {
-
-                explosion(
-                    enemy.x,
-                    enemy.y,
-                    enemy.color
-                );
-
-
-                enemy.alive = false;
-
-
-                score += 250;
-
-            }
-
-
-            /*
-            ENEMIGO CONTRA SU PROPIA ESTELA
-            */
-
-            else if(
-                hitTrail(
-                    enemy.x,
-                    enemy.y,
-                    enemy.trail,
-                    25
-                )
-            ) {
-
-                explosion(
-                    enemy.x,
-                    enemy.y,
-                    enemy.color
-                );
-
-
-                enemy.alive = false;
-
-
-                score += 150;
-
-            }
-
+        // Mantiene a los enemigos dentro del campo y orientados hacia el interior.
+        const edge = 32;
+        if (enemy.x < edge) {
+            enemy.x = edge;
+            enemy.changeDirection(DIRECTIONS.down);
+        } else if (enemy.x > WIDTH - edge) {
+            enemy.x = WIDTH - edge;
+            enemy.changeDirection(DIRECTIONS.up);
         }
-    );
 
+        if (enemy.y < edge) {
+            enemy.y = edge;
+            enemy.changeDirection(DIRECTIONS.right);
+        } else if (enemy.y > HEIGHT - edge) {
+            enemy.y = HEIGHT - edge;
+            enemy.changeDirection(DIRECTIONS.left);
+        }
+
+        enemy.nextDirection = enemy.direction;
+
+        // Enemigo contra la estela del jugador.
+        if (hitTrail(enemy.x, enemy.y, player.trail, 20)) {
+            explosion(enemy.x, enemy.y, enemy.color);
+            enemy.alive = false;
+            score += 250;
+        }
+        // Enemigo contra su propia estela.
+        else if (hitTrail(enemy.x, enemy.y, enemy.trail, 25)) {
+            explosion(enemy.x, enemy.y, enemy.color);
+            enemy.alive = false;
+            score += 150;
+        }
+    });
 
     enemies =
         enemies.filter(
