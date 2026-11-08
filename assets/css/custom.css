@@ -69,15 +69,23 @@ a:hover { color: #00596D; }
 }
 
 
-/* Restore the original autobiography layout: photo on the left, text and Instagram on the right. */
+/* Autobiography: keep the photo and Instagram together in the left column. */
 .bio-layout {
   display: grid;
-  grid-template-columns: minmax(190px, 280px) minmax(0, 1fr);
+  grid-template-columns: minmax(210px, 280px) minmax(0, 1fr);
   gap: 2rem;
   align-items: start;
   margin: 1.5rem 0 2.5rem;
 }
+.bio-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  gap: .85rem;
+  min-width: 0;
+}
 .bio-photo-placeholder {
+  width: 100%;
   min-height: 300px;
   aspect-ratio: 4 / 5;
   display: flex;
@@ -92,14 +100,15 @@ a:hover { color: #00596D; }
   font-weight: 600;
   letter-spacing: .08em;
 }
-.bio-text p:first-child {
-  margin-top: 0;
-}
+.bio-text p:first-child { margin-top: 0; }
 .bio-instagram {
   display: inline-flex;
   align-items: center;
+  justify-content: center;
   gap: .45rem;
-  margin-top: .5rem;
+  width: fit-content;
+  max-width: 100%;
+  margin-top: 0;
   padding: .55rem .9rem;
   border: 1px solid rgba(0,127,155,.4);
   border-radius: 999px;
@@ -108,12 +117,14 @@ a:hover { color: #00596D; }
 }
 @media (max-width: 700px) {
   .bio-layout {
-    grid-template-columns: 1fr;
+    grid-template-columns: minmax(0, 1fr);
     gap: 1.25rem;
   }
-  .bio-photo-placeholder {
+  .bio-profile {
     width: min(100%, 260px);
-    min-height: 260px;
     margin: 0 auto;
+  }
+  .bio-photo-placeholder {
+    min-height: 260px;
   }
 }
