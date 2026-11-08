@@ -67,3 +67,53 @@ a:hover { color: #00596D; }
   background-color: #E7FBFF !important;
   border-color: #8AD8E8 !important;
 }
+
+
+/* Restore the original autobiography layout: photo on the left, text and Instagram on the right. */
+.bio-layout {
+  display: grid;
+  grid-template-columns: minmax(190px, 280px) minmax(0, 1fr);
+  gap: 2rem;
+  align-items: start;
+  margin: 1.5rem 0 2.5rem;
+}
+.bio-photo-placeholder {
+  min-height: 300px;
+  aspect-ratio: 4 / 5;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1rem;
+  border: 2px dashed #009FC2;
+  border-radius: 14px;
+  background: linear-gradient(145deg, #DDF7FC, #F3FCFE);
+  color: #006C83;
+  text-align: center;
+  font-weight: 600;
+  letter-spacing: .08em;
+}
+.bio-text p:first-child {
+  margin-top: 0;
+}
+.bio-instagram {
+  display: inline-flex;
+  align-items: center;
+  gap: .45rem;
+  margin-top: .5rem;
+  padding: .55rem .9rem;
+  border: 1px solid rgba(0,127,155,.4);
+  border-radius: 999px;
+  font-weight: 600;
+  text-decoration: none;
+}
+@media (max-width: 700px) {
+  .bio-layout {
+    grid-template-columns: 1fr;
+    gap: 1.25rem;
+  }
+  .bio-photo-placeholder {
+    width: min(100%, 260px);
+    min-height: 260px;
+    margin: 0 auto;
+  }
+}
