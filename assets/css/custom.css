@@ -1,34 +1,41 @@
-/* IBERO cyan visual theme. Loaded from _includes/head_custom.html */
+/* IBERO cyan theme. The title must remain text, with exactly one small logo beside it. */
 :root {
   --ibero-cyan: #009FC2;
   --ibero-cyan-dark: #007F9B;
   --ibero-cyan-pale: #F3FCFE;
 }
 
-/* Sidebar and title */
+/* Remove any theme-generated logo container so it cannot duplicate the mark. */
+.side-bar .site-title .site-logo,
+.side-bar .site-title img,
+.side-bar .site-header .site-logo {
+  display: none !important;
+  background-image: none !important;
+}
+
+/* Sidebar and header */
 .side-bar,
 .side-bar .site-header {
   background-color: #008EAD !important;
 }
 .side-bar .site-title {
   display: flex !important;
-  align-items: center;
-  gap: 10px;
+  align-items: center !important;
+  justify-content: flex-start !important;
+  gap: 10px !important;
+  min-height: 58px;
   color: #FFFFFF !important;
   font-size: 1.2rem;
   line-height: 1.2;
-  min-height: 58px;
+  white-space: nowrap;
 }
 .side-bar .site-title::before {
-  content: "";
-  display: block;
-  flex: 0 0 58px;
-  width: 58px;
-  height: 44px;
-  background-image: url("/documentacion-Mau-salas/assets/images/logo-ibero.jpg");
-  background-size: contain;
-  background-repeat: no-repeat;
-  background-position: center;
+  content: "" !important;
+  display: block !important;
+  flex: 0 0 58px !important;
+  width: 58px !important;
+  height: 40px !important;
+  background: url("/documentacion-Mau-salas/assets/images/logo-ibero.jpg?v=2") center / contain no-repeat !important;
 }
 .side-bar .site-button,
 .side-bar .site-button .icon {
@@ -36,26 +43,13 @@
   fill: #FFFFFF !important;
 }
 
-/* Page surface and typography */
-.main,
-.main-content-wrap,
-.main-content,
-.page-content {
+/* Main page */
+.main, .main-content-wrap, .main-content, .page-content, body {
   background-color: #F3FCFE !important;
 }
-body {
-  background-color: #F3FCFE;
-}
-.main-content {
-  color: #17343B;
-}
-a,
-a:visited {
-  color: #007F9B;
-}
-a:hover {
-  color: #00596D;
-}
+.main-content { color: #17343B; }
+a, a:visited { color: #007F9B; }
+a:hover { color: #00596D; }
 
 /* Navigation */
 .side-bar .nav-list-link,
@@ -69,8 +63,7 @@ a:hover {
   background-color: rgba(255,255,255,.18) !important;
   color: #FFFFFF !important;
 }
-.search-input,
-.search-input:focus {
+.search-input, .search-input:focus {
   background-color: #E7FBFF !important;
   border-color: #8AD8E8 !important;
 }
