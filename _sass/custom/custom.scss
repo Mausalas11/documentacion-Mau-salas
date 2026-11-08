@@ -1,16 +1,40 @@
-/* IBERO cyan theme refinements for Just the Docs */
-:root {
-  --ibero-cyan: #009FC2;
-}
-.side-bar, .site-header {
-  background-color: #008EAD;
+/* IBERO cyan theme + logo next to the original title */
+.side-bar {
+  background-color: #008EAD !important;
 }
 .side-bar .site-title {
-  color: #fff;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  color: #ffffff !important;
+  font-size: 1.2rem;
+  line-height: 1.2;
+}
+.side-bar .site-title::before {
+  content: "";
+  display: inline-block;
+  width: 58px;
+  height: 40px;
+  flex: 0 0 58px;
+  background-image: url("../images/logo-ibero.jpg");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+.site-header {
+  background-color: #008EAD !important;
 }
 .page-content {
-  background: #F3FCFE;
+  background-color: #F3FCFE;
 }
 a, a:visited { color: #007F9B; }
 a:hover { color: #00596D; }
-.site-footer { color: #EAFBFF; }
+.side-bar .nav-list-link,
+.side-bar .site-nav a,
+.side-bar .site-footer {
+  color: #ffffff !important;
+}
+.side-bar .nav-list-link:hover,
+.side-bar .nav-list-link.active {
+  background-color: rgba(255,255,255,.18) !important;
+}
