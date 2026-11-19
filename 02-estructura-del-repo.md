@@ -97,8 +97,8 @@ void loop()
 }
 ```
 
-## 01 PIN_13_HIGH
-Link del video: [Práctica_01](https://youtube.com/shorts/f5nQAyJDfuA?feature=share)
+## 1_Salida Digital HIGH
+Link del video: [Práctica_01](https://youtu.be/FJojZjkytio)
 ![Práctica_02](assets/img/Tarea_1/practicas/02.png)
 
 Aquí se configuró el indicador LED del arduino para que se mantenga encendido (HIGH).
@@ -117,8 +117,8 @@ void loop()
   digitalWrite(13, HIGH);
 }
 ```
-## 02 PIN_13_LOW
-Link del video: [Práctica_02](https://youtube.com/shorts/JB2_dd-b4W0?feature=share)
+## 2_Salida Digital LOW
+Link del video: [Práctica_02](https://youtu.be/wHXoo0sqeSI)
 ![Práctica_03](assets/img/Tarea_1/practicas/03.png)
 
 En ésta parte se configuró el indicador LED para que se mantuviera apagado (LOW).
@@ -137,8 +137,8 @@ void loop()
   digitalWrite(13, LOW);
 }
 ```
-## 03 Delay
-Link del video: [Práctica_03](https://youtube.com/shorts/T_IeBeGRtW0?feature=share)
+## 5_Salida digital protoboard
+Link del video: [Práctica_03](https://youtu.be/j1RQm0Jhgso)
 ![Práctica_04](assets/img/Tarea_1/practicas/04.png)
 
 Aquí se programó el arduino para que el indicador LED tenga un retraso (delay) de 1 segundo.
@@ -183,34 +183,11 @@ void loop()
   delay(1000); // Wait for 1000 millisecond(s)
 }
 ```
-## 05 Circuito con resistor para Led
-Link del video: [Práctica_05](https://youtube.com/shorts/GW0NLEjQkjs?feature=share)
+##  7_Salida digital leds II
+Link del video: [Práctica_05](https://youtu.be/T-2o8AGpFiA)
 ![Práctica_06](assets/img/Tarea_1/practicas/06.png)
 
 Se construyó un circuito con una resistencia de 220 ohmios para proteger al LED. A su vez, el código permitía que el LED parpadeara como en el ejercicio anterior.
-
-Código práctica :
-```yml
-// C++ code
-//
-void setup()
-{
-  pinMode(13, OUTPUT);
-}
-
-void loop()
-{
-  digitalWrite(13, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(13, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
-}
-```
-## 06 Circuito con dos LEDs alternando
-Link del video: [Práctica_06](https://youtube.com/shorts/-ThP8Hp3MgQ?feature=share)
-![Práctica_07](assets/img/Tarea_1/practicas/07.png)
-
-Se expandió el circuito existente añadiendo un LED y resistencia adicional en paralelo, y el código permitía que parpadearan intermitentemente uno tras otro.
 
 Código práctica :
 ```yml
@@ -234,34 +211,11 @@ void loop()
   delay(1000); // Wait for 1000 millisecond(s)
 }
 ```
-## 07 Circuito con dos LEDs emparejados
-Link del video: [Práctica_07](https://youtube.com/shorts/CKdG0U9ygZA?feature=share)
-![Práctica_08](assets/img/Tarea_1/practicas/08.png)
+## 8_Salida digital display 7 segmentos
+Link del video: [Práctica_06](https://youtu.be/lGgnoD59rd8)
+![Práctica_07](assets/img/Tarea_1/practicas/07.png)
 
-En escencia es el mismo circuito que el anterior, solo que el programa hace que los LEDs vayan a la misma frecuencia.
-
-Código práctica :
-```yml
-// C++ code
-//
-void setup()
-{
-  pinMode(13, OUTPUT);
-}
-
-void loop()
-{
-  digitalWrite(13, HIGH);
-  delay(1000); // Wait for 1000 millisecond(s)
-  digitalWrite(13, LOW);
-  delay(1000); // Wait for 1000 millisecond(s)
-}
-```
-## 08 Display de 7 segmentos
-Link del video: [Práctica_08](https://youtube.com/shorts/yo0eoAQBA6g?feature=share)
-![Práctica_09](assets/img/Tarea_1/practicas/09.png)
-
-Se hicieron las conexiones correspondientes al display de 7 segmentos para que mostrara el número 9. Esto gracias a que el código mandaba señales HIGH y LOW a los pines correspondientes del display.
+Se expandió el circuito existente añadiendo un LED y resistencia adicional en paralelo, y el código permitía que parpadearan intermitentemente uno tras otro.
 
 Código práctica :
 ```yml
@@ -292,11 +246,11 @@ void loop()
   delay(1000);
 }
 ```
-## 09 Contador
-Link del video: [Práctica_09](https://youtube.com/shorts/JFwFJl4hdnE?feature=share)
-![Práctica_10](assets/img/Tarea_1/practicas/10.png)
+## 9_Salida digital display 7 segmentos
+Link del video: [Práctica_07](https://youtu.be/Xsc4x0tpjGU)
+![Práctica_08](assets/img/Tarea_1/practicas/08.png)
 
-Se hizo un programa para realizar una secuencia númerica del 1 al 3 (no se hicieron bien las conexiones).
+En escencia es el mismo circuito que el anterior, solo que el programa hace que los LEDs vayan a la misma frecuencia.
 
 Código práctica :
 ```yml
@@ -351,11 +305,11 @@ void loop()
   
 }
 ```
-## 10 Entrada digital con botón
-Link del video: [Práctica_10](https://youtube.com/shorts/Obgd7tISlhM?feature=share)
-![Práctica_11](assets/img/Tarea_1/practicas/11.png)
+## 10_Entrada digital boton
+Link del video: [Práctica_08](https://youtube.com/shorts/SAeVSAYpP9E?feature=share)
+![Práctica_09](assets/img/Tarea_1/practicas/09.png)
 
-Construimos un circuito en el que un botón permitía el flujo de corriente a un LED, siendo el estado del botón la condición lógica.
+Se hicieron las conexiones correspondientes al display de 7 segmentos para que mostrara el número 9. Esto gracias a que el código mandaba señales HIGH y LOW a los pines correspondientes del display.
 
 Código práctica :
 ```yml
@@ -374,7 +328,76 @@ void loop()
   digitalWrite(13, digitalRead(8)); //Escribimpos en el LED el valor del BOTON
 }
 ```
-## 11 Entrada digital con dos botónes
+## 11_Entrada digital 2 botones
+Link del video: [Práctica_09](https://youtube.com/shorts/Y7xizQ8nPZ4?feature=share)
+![Práctica_10](assets/img/Tarea_1/practicas/10.png)
+
+Se hizo un programa para realizar una secuencia númerica del 1 al 3 (no se hicieron bien las conexiones).
+
+Código práctica :
+```yml
+  // C++ code
+//
+
+void setup()
+{
+  pinMode(13, OUTPUT);	//LED1
+  pinMode(8, INPUT);	//BOTON1
+  
+  pinMode(11, OUTPUT);	//LED2
+  pinMode(2, INPUT);	//BOTON2
+}
+
+void loop()
+{
+  
+  digitalWrite(13, digitalRead(8)); //Escribimpos en el LED1 el valor del BOTON1
+  digitalWrite(11, digitalRead(2)); //Escribimpos en el LED2 el valor del BOTON2
+}
+```
+## 13_Entrada digital condicionales 2 botones
+Link del video: [Práctica_10](https://youtube.com/shorts/Urie1dr-ado?feature=share)
+![Práctica_11](assets/img/Tarea_1/practicas/11.png)
+
+Construimos un circuito en el que un botón permitía el flujo de corriente a un LED, siendo el estado del botón la condición lógica.
+
+Código práctica :
+```yml
+// C++ code
+//
+
+void setup()
+{
+  pinMode(13, OUTPUT);	//LED1
+  pinMode(8, INPUT);	//BOTON1
+  
+  pinMode(11, OUTPUT);	//LED2
+  pinMode(2, INPUT);	//BOTON2
+}
+
+void loop()
+{
+  
+  if (digitalRead(8) == HIGH)		//Pregunta si el boton1 esta activado
+  {
+    digitalWrite(13, HIGH);			//SI: encendemos el led1
+  }
+  else if(digitalRead(8) == LOW)	//Pregunta si el boton1 esta desactivado
+  {
+    digitalWrite(13, LOW);			//SI: apagamos el led1
+  }
+  
+  if (digitalRead(2) == HIGH)		//Pregunta si el boton2 esta activado
+  {
+    digitalWrite(11, HIGH);			//SI: encendemos el led2
+  }
+  else if(digitalRead(2) == LOW)	//Pregunta si el boton2 esta desactivado
+  {
+    digitalWrite(11, LOW);			//SI: apagamos el led2
+  }
+}
+```
+## cambiar desde aqui
 Link del video: [Práctica_11](https://youtube.com/shorts/QLBKjJ9850g?feature=share)
 ![Práctica_12](assets/img/Tarea_1/practicas/12.png)
 
