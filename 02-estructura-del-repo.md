@@ -73,8 +73,8 @@ Botón que permite el flujo de corriente cuando se oprime debido a que se encuen
 
 # Prácticas
 
-## 00 Prueba parpadeo PIN 13 Arduino UNO
-Link del video: [Práctica_00](https://youtube.com/shorts/im3Q0wr0bbQ?feature=share)
+## 0_Ejemplo Blink
+Link del video: [Práctica_00](https://youtu.be/OamuKFg-FJM)
 ![Práctica_01](assets/img/Tarea_1/practicas/01.png)
 
 Esta práctica nos permite ver el Arduino inicializado, con la evidencia de que el indicador LED de entradas se encuentra parpadeando.
