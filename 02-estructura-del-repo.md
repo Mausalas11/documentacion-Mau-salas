@@ -397,8 +397,8 @@ void loop()
   }
 }
 ```
-## cambiar desde aqui
-Link del video: [Práctica_11](https://youtube.com/shorts/QLBKjJ9850g?feature=share)
+## 14_Condicionales OR boton
+Link del video: [Práctica_11](https://youtube.com/shorts/70IjvkiYgEA?si=-nA852-QUETuvGfu)
 ![Práctica_12](assets/img/Tarea_1/practicas/12.png)
 
 En escencia es la práctica anterior pero con dos botones.
@@ -410,22 +410,29 @@ Código práctica :
 
 void setup()
 {
+  //Inicializamos puertos
   pinMode(13, OUTPUT);	//LED1
-  pinMode(8, INPUT);	//BOTON1
   
-  pinMode(11, OUTPUT);	//LED2
+  pinMode(8, INPUT);	//BOTON1
   pinMode(2, INPUT);	//BOTON2
 }
 
 void loop()
-{
   
-  digitalWrite(13, digitalRead(8)); //Escribimpos en el LED1 el valor del BOTON1
-  digitalWrite(11, digitalRead(2)); //Escribimpos en el LED2 el valor del BOTON2
+{
+  if (digitalRead(8) == HIGH || digitalRead(2) == HIGH)		//Pregunta si se cumple la condición
+  {
+    digitalWrite(13, HIGH);			//SI: encendemos el led1
+  }
+  else	//En caso contrario
+  {
+    digitalWrite(13, LOW);			//NO: apagamos el led1
+  }
+
 }
 ```
-## 12 Entrada digital con condición
-Link del video: [Práctica_12](https://youtube.com/shorts/SlA5CXg_wUw?feature=share)
+## 16_Contador leds
+Link del video: [Práctica_12](https://youtube.com/shorts/dIq9PnbIKa0?si=9ZR-143D5rwgODCg)
 ![Práctica_13](assets/img/Tarea_1/practicas/13.png)
 
 Lo que hace este código es leer el estado del botón, en este caso cuando se pulsa, el arduino lee que se cumple la condición y enciende el LED, cuando no se cumple lo apaga.
@@ -433,25 +440,66 @@ Lo que hace este código es leer el estado del botón, en este caso cuando se pu
 Código práctica :
 ```yml
 // C++ code
-//
+// CONTADOR
+
+int cuenta = 0;		//Variable que guarda el numero de veces que se ha contado
 
 void setup()
 {
-  pinMode(13, OUTPUT);	//LED
-  
-  pinMode(8, INPUT);	//BOTON
+  //Inicializamos puertos
+  pinMode(13, OUTPUT);	//LED1
+  pinMode(12, OUTPUT);	//LED2
+  pinMode(11, OUTPUT);	//LED3
+  pinMode(10, OUTPUT);	//LED4
+  pinMode(2, INPUT);	//BOTON
 }
 
 void loop()
 {
-  
-  if (digitalRead(8) == HIGH)		//Pregunta si el boton1 esta activado
+  if (digitalRead(2) == HIGH)		//Pregunta si el boton esta activado
   {
-    digitalWrite(13, HIGH);			//SI: encendemos el led1
+    cuenta++;
+    delay(500);
   }
-  else if(digitalRead(8) == LOW)	//Pregunta si el boton1 esta desactivado
+  if(cuenta >= 5)
   {
-    digitalWrite(13, LOW);			//SI: apagamos el led1
+    cuenta = 0;
+  }
+  
+  if(cuenta == 0)
+  {
+  	digitalWrite(13, LOW);
+    digitalWrite(12, LOW);
+    digitalWrite(11, LOW);
+    digitalWrite(10, LOW);
+  } 
+  else if(cuenta == 1)
+  {
+  	digitalWrite(13, HIGH);
+    digitalWrite(12, LOW);
+    digitalWrite(11, LOW);
+    digitalWrite(10, LOW);
+  } 
+  else if(cuenta == 2)
+  {
+  	digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(11, LOW);
+    digitalWrite(10, LOW);
+  }
+  else if(cuenta == 3)
+  {
+  	digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(10, LOW);
+  }
+  else if(cuenta == 4)
+  {
+  	digitalWrite(13, HIGH);
+    digitalWrite(12, HIGH);
+    digitalWrite(11, HIGH);
+    digitalWrite(10, HIGH);
   }
 }
 ```
